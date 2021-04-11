@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: bhanuprakashpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bhanuprakashpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: bhanuprakashpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: bhanuprakashpipelinesjavascriptdocker 
+          image: demonewacrregistry.azurecr.io/bhanuprakashpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
